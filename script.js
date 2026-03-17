@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounters();
     initFlipCards();
     initSmoothScroll();
+    initFAQ();
 });
 
 /**
@@ -120,7 +121,7 @@ function initMobileMenu() {
  * Reveal elements on scroll using Intersection Observer
  */
 function initScrollAnimations() {
-    const revealElements = document.querySelectorAll('.servicios, .casos-exito, .porque-elegirnos, .contacto, .cta-final');
+    const revealElements = document.querySelectorAll('.servicios, .casos-exito, .testimonios, .faq, .porque-elegirnos, .contacto, .cta-final');
     
     const observerOptions = {
         threshold: 0.1,
@@ -312,3 +313,36 @@ document.addEventListener('mouseleave', function() {
         sphere.style.transform = 'translate(0, 0)';
     }
 });
+
+/**
+ * FAQ Accordion
+ * Toggle FAQ items
+ */
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(function(item) {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        if (question && answer) {
+            // Close all by default
+            answer.style.display = 'none';
+            
+            question.addEventListener('click', function() {
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all others
+                faqItems.forEach(function(otherItem) {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    if (otherAnswer && otherItem !== item) {
+                        otherAnswer.style.display = 'none';
+                    }
+                });
+                
+                // Toggle current
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        }
+    });
+}

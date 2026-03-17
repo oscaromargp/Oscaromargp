@@ -737,6 +737,140 @@ a {
 }
 
 /* ========================================
+   TESTIMONIOS
+   ======================================== */
+.testimonios {
+    padding: 120px 0;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.testimonio-card {
+    padding: 32px;
+}
+
+.testimonio-stars {
+    color: var(--primary-400);
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+}
+
+.testimonio-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.testimonio-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(168, 85, 247, 0.1);
+    border: 2px solid var(--primary-400);
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.author-role {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq {
+    padding: 120px 0;
+    background: var(--bg-secondary);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.faq-item {
+    padding: 24px;
+}
+
+.faq-question {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.faq-question h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.faq-answer {
+    padding-left: 48px;
+}
+
+.faq-answer p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.faq-answer strong {
+    color: var(--primary-400);
+}
+
+.faq-cta {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-cta p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #22C55E 0%, #16A34A 30%, #15803D 60%, #22C55E 100%) !important;
+    border-color: #22C55E !important;
+}
+
+/* ========================================
    POR QUÉ ELEGIRNOS
    ======================================== */
 .porque-elegirnos {
@@ -1139,7 +1273,9 @@ a {
     }
     
     .services-grid,
-    .casos-grid {
+    .casos-grid,
+    .testimonios-grid,
+    .faq-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -1211,12 +1347,19 @@ a {
     }
     
     .services-grid,
-    .casos-grid {
+    .casos-grid,
+    .testimonios-grid,
+    .faq-grid {
         grid-template-columns: 1fr;
     }
     
     .service-card-flip {
         height: 350px;
+    }
+    
+    .faq-answer {
+        padding-left: 0;
+        padding-top: 12px;
     }
     
     .cta-buttons {
