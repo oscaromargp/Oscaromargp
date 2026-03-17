@@ -527,9 +527,37 @@ a {
 /* ========================================
    SERVICIOS SECTION
    ======================================== */
-.servicios {
-    padding: 120px 0;
-    position: relative;
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* Link wrapper for flip cards */
+.service-card-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.service-card-link:hover .service-card-flip .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* CTA Link inside flip card */
+.service-cta-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--primary-400);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.service-cta-link:hover {
+    color: var(--primary-300);
 }
 
 .services-grid {
