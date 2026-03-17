@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCAROMARGP | Agencia de Consultoría y Soluciones Digitales</title>
+    <meta name="description" content="Agencia consultora integral para empresas que buscan escalar. Diseño, desarrollo web, automatización y marketing digital.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">OSCAR<span class="gradient-text">OMARGP</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#casos" class="nav-link">Casos de Éxito</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-label">
+                    <span class="hero-icon">🚀</span>
+                    Agencia de Consultoría y Soluciones Digitales
+                </span>
+                <h1 class="hero-title">
+                    Transforma tu Negocio con <span class="gradient-text">Estrategia Digital</span>
+                </h1>
+                <p class="hero-subtitle">
+                    No somos solo un proveedor de servicios aislados. Somos una agencia consultora integral diseñada para empresas que buscan escalar. Desde La Paz, B.C.S. para el mundo.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary">
+                        <span class="btn-icon">💬</span>
+                        Hablemos de tu Proyecto
+                    </a>
+                    <a href="#servicios" class="btn-secondary">
+                        Ver Servicios
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Años</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label">Compromiso</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-sphere">
+                    <div class="sphere-inner">
+                        <div class="sphere-glow"></div>
+                        <div class="sphere-icon">⚡</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nuestros Servicios</span>
+                <h2 class="section-title">Solución <span class="gradient-text">360º</span> Integral</h2>
+                <p class="section-subtitle">
+                    No necesitas contratar a un diseñador, programador y estratega por separado. Integramos todas las piezas del rompecabezas digital.
+                </p>
+            </div>
+            <div class="services-grid">
+                <!-- Servicio 1: Diseño Gráfico -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-placeholder" style="background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);">
+                                <span class="placeholder-icon">🎨</span>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Diseño Gráfico</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <div class="service-icon">🎨</div>
+                            <h3 class="service-title-back">Diseño Gráfico y Branding</h3>
+                            <p class="service-description">Creación de identidades visuales, logotipos, manuales de marca, material publicitario y modelado 3D.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Identidad</span>
+                                <span class="feature-tag">Branding</span>
+                                <span class="feature-tag">3D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Desarrollo Web -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-placeholder" style="background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);">
+                                <span class="placeholder-icon">🌐</span>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Desarrollo Web</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <div class="service-icon">🌐</div>
+                            <h3 class="service-title-back">Desarrollo y Arquitectura Web</h3>
+                            <p class="service-description">Landing pages de alta conversión, tiendas en línea, gestión de hosting y optimizaciones.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">WordPress</span>
+                                <span class="feature-tag">E-commerce</span>
+                                <span class="feature-tag">SEO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Automatización -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-placeholder" style="background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);">
+                                <span class="placeholder-icon">⚙️</span>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Automatización</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <div class="service-icon">⚙️</div>
+                            <h3 class="service-title-back">Automatización y Sistematización</h3>
+                            <p class="service-description">Scripts Python, Google Apps Script, flujos n8n y Antigravity. Elimina tareas manuales.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Python</span>
+                                <span class="feature-tag">n8n</span>
+                                <span class="feature-tag">Workflows</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Marketing Digital -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-placeholder" style="background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);">
+                                <span class="placeholder-icon">📈</span>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Marketing Digital</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <div class="service-icon">📈</div>
+                            <h3 class="service-title-back">Estrategia Digital y Marketing</h3>
+                            <p class="service-description">Contenido audiovisual, Meta Ads, SEO orgánico y Community Management.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Meta Ads</span>
+                                <span class="feature-tag">SEO</span>
+                                <span class="feature-tag">Contenido</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Video y Foto -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-placeholder" style="background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);">
+                                <span class="placeholder-icon">🎬</span>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Audiovisual</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <div class="service-icon">🎬</div>
+                            <h3 class="service-title-back">Producción Audiovisual</h3>
+                            <p class="service-description">Toma de fotografía, grabación y edición de video para redes sociales y campañas.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Foto</span>
+                                <span class="feature-tag">Video</span>
+                                <span class="feature-tag">Edición</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Consultoría -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-placeholder" style="background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);">
+                                <span class="placeholder-icon">🏠</span>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Consultoría</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <div class="service-icon">🏠</div>
+                            <h3 class="service-title-back">Consultoría y Real Estate</h3>
+                            <p class="service-description">Gestión de propiedades, corretaje inmobiliario y asesoría en el sector.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Airbnb</span>
+                                <span class="feature-tag">Broker</span>
+                                <span class="feature-tag">Propiedades</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Éxito -->
+    <section class="casos-exito" id="casos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Casos de Éxito</span>
+                <h2 class="section-title">Nuestra Experiencia <span class="gradient-text">en Acción</span></h2>
+            </div>
+            <div class="casos-grid">
+                <div class="caso-card glass-card">
+                    <div class="caso-header">
+                        <span class="caso-icon">💰</span>
+                        <h3>9Stratex</h3>
+                    </div>
+                    <p class="caso-sector">Sector Financiero y Tecnológico</p>
+                    <p class="caso-desc">Desarrollo de diseño gráfico y web, automatización de procesos para eficientar operaciones interbancarias fiat/crypto.</p>
+                    <a href="https://9stratex.com/" target="_blank" class="caso-link">Ver proyecto →</a>
+                </div>
+                <div class="caso-card glass-card">
+                    <div class="caso-header">
+                        <span class="caso-icon">🎵</span>
+                        <h3>BNRecords</h3>
+                    </div>
+                    <p class="caso-sector">Sector Entretenimiento y Música</p>
+                    <p class="caso-desc">Ecosistema digital completo: diseño gráfico, web, fotografía, video, SEO y Meta Ads para casa disquera.</p>
+                    <a href="https://bnrecords.com.mx/" target="_blank" class="caso-link">Ver proyecto →</a>
+                </div>
+                <div class="caso-card glass-card">
+                    <div class="caso-header">
+                        <span class="caso-icon">💈</span>
+                        <h3>Barbería Barba Negra</h3>
+                    </div>
+                    <p class="caso-sector">Sector Comercial y Servicios</p>
+                    <p class="caso-desc">Identidad visual, gigantografías, publicidad y automatización de fichas de inscripción y vales.</p>
+                    <a href="#" target="_blank" class="caso-link">Ver proyecto →</a>
+                </div>
+                <div class="caso-card glass-card">
+                    <div class="caso-header">
+                        <span class="caso-icon">🏝️</span>
+                        <h3>Parade Santos</h3>
+                    </div>
+                    <p class="caso-sector">Sector Inmobiliario</p>
+                    <p class="caso-desc">Agencia inmobiliaria con embudos de venta digitales y gestión integral de propiedades.</p>
+                    <a href="https://pardesantos.mx/" target="_blank" class="caso-link">Ver proyecto →</a>
+                </div>
+                <div class="caso-card glass-card">
+                    <div class="caso-header">
+                        <span class="caso-icon">🏖️</span>
+                        <h3>Exploración BCS</h3>
+                    </div>
+                    <p class="caso-sector">Sector Creativo y Travel</p>
+                    <p class="caso-desc">Producción audiovisual, fotografía y storytelling para turismo en Baja California Sur.</p>
+                    <a href="#" target="_blank" class="caso-link">Ver proyecto →</a>
+                </div>
+                <div class="caso-card glass-card">
+                    <div class="caso-header">
+                        <span class="caso-icon">📚</span>
+                        <h3>Nadie se Casa Solo</h3>
+                    </div>
+                    <p class="caso-sector">Sector Editorial</p>
+                    <p class="caso-desc">Diseño de portada de libro publicado en Amazon. Creación de marca personal del autor.</p>
+                    <a href="https://www.amazon.in/Nadie-se-casa-sobrio-Spanish-ebook/dp/B0FC8ZBFKB" target="_blank" class="caso-link">Ver proyecto →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Qué Elegirnos -->
+    <section class="porque-elegirnos" id="nosotros">
+        <div class="container">
+            <div class="porque-grid">
+                <div class="porque-visual">
+                    <div class="porque-image glass-card">
+                        <span class="porque-icon">🎯</span>
+                        <h3>OSCAROMARGP</h3>
+                        <p>Agencia de Consultoría y Soluciones Digitales</p>
+                        <p class="porque-slogan">"Libertad mediante estructura. Seguridad mediante control. Impacto mediante eficiencia."</p>
+                    </div>
+                </div>
+                <div class="porque-content">
+                    <span class="section-label">¿Por Qué Elegirnos?</span>
+                    <h2 class="section-title">Tu Equipo de <span class="gradient-text">Arquitectos Digitales</span></h2>
+                    <p class="porque-text">
+                        Contratar a Oscaromargp significa integrar a tu equipo a un arquitecto de negocios. La verdadera ventaja competitiva radica en la capacidad de ver el panorama completo.
+                    </p>
+                    <div class="porque-features">
+                        <div class="porque-feature">
+                            <span class="feature-icon">🎨</span>
+                            <div class="feature-text">
+                                <h4>Diseño que Impacta</h4>
+                                <p>Desde el logotipo que atrae hasta la campaña que convierte</p>
+                            </div>
+                        </div>
+                        <div class="porque-feature">
+                            <span class="feature-icon">⚡</span>
+                            <div class="feature-text">
+                                <h4>Tech que Automatiza</h4>
+                                <p>Scripts y workflows que registran pagos y envíos sin que muevas un dedo</p>
+                            </div>
+                        </div>
+                        <div class="porque-feature">
+                            <span class="feature-icon">📊</span>
+                            <div class="feature-text">
+                                <h4>Estrategia que Escala</h4>
+                                <p>Visión integral para hacer crecer tu negocio sosteniblemente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="cta-bg-gradient"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Listo para Escalar tu Negocio?</h2>
+                <p class="cta-subtitle">Hablemos de tu próximo proyecto y hagámoslo realidad juntos</p>
+                <div class="cta-buttons">
+                    <a href="mailto:oscaromargp@gmail.com" class="btn-primary btn-large">
+                        <span>📧</span> Enviar Email
+                    </a>
+                    <a href="tel:6121078075" class="btn-secondary btn-large">
+                        <span>📞</span> Llamar Ahora
+                    </a>
+                </div>
+                <p class="cta-urgency">📱 Available Monday to Sunday</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <span class="section-label">Contacto</span>
+                    <h2 class="section-title">Hablemos <span class="gradient-text">Ahora</span></h2>
+                    <p class="contacto-desc">
+                        Estamos listos para transformar tu negocio. Contáctanos por cualquiera de estos medios.
+                    </p>
+                    <div class="contacto-methods">
+                        <a href="tel:6121078075" class="contacto-method">
+                            <span class="method-icon">📞</span>
+                            <div class="method-details">
+                                <span class="method-label">Teléfono</span>
+                                <span class="method-value">612-107-8075</span>
+                            </div>
+                        </a>
+                        <a href="mailto:oscaromargp@gmail.com" class="contacto-method">
+                            <span class="method-icon">✉️</span>
+                            <div class="method-details">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">oscaromargp@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://bit.ly/oscaromargp" target="_blank" class="contacto-method">
+                            <span class="method-icon">🌐</span>
+                            <div class="method-details">
+                                <span class="method-label">Portafolio</span>
+                                <span class="method-value">bit.ly/oscaromargp</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contacto-social">
+                        <span class="social-label">Más proyectos:</span>
+                        <div class="social-links">
+                            <a href="https://pardesantos.mx/" target="_blank" class="social-link">Parade Santos</a>
+                            <a href="https://9stratex.com/" target="_blank" class="social-link">9Stratex</a>
+                            <a href="https://bnrecords.com.mx/" target="_blank" class="social-link">BNRecords</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text-footer">OSCAR<span class="gradient-text">OMARGP</span></span>
+                    <p class="footer-desc">Agencia de Consultoría y Soluciones Digitales</p>
+                    <p class="footer-location">📍 La Paz, Baja California Sur</p>
+                    <p class="footer-slogan">"Libertad mediante estructura. Seguridad mediante control. Impacto mediante eficiencia."</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Diseño Gráfico</a></li>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Automatización</a></li>
+                        <li><a href="#">Marketing Digital</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Proyectos</h4>
+                    <ul>
+                        <li><a href="https://pardesantos.mx/" target="_blank">Parade Santos</a></li>
+                        <li><a href="https://9stratex.com/" target="_blank">9Stratex</a></li>
+                        <li><a href="https://bnrecords.com.mx/" target="_blank">BNRecords</a></li>
+                        <li><a href="#">Ver todos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="credits">
+                    <p class="credits-main">&copy; 2026 OSCAROMARGP. Todos los derechos reservados.</p>
+                    <p class="credits-developer">
+                        <span class="credits-label">Desarrollado por:</span>
+                        <span class="credits-name">OSCAR OMAR Gómez Peña</span>
+                        <span class="credits-title">EMPRENDEDOR TECNOLÓGICO DIGITAL</span>
+                        <span class="credits-contact">📞 612-107-8075</span>
+                        <span class="credits-email">✉️ oscaromargp@gmail.com | oscar_omargp@hotmail.com | oscar_omargp@yahoo.com.mx</span>
+                        <span class="credits-web">🌐 <a href="https://bit.ly/oscaromargp" target="_blank">bit.ly/oscaromargp</a></span>
+                    </p>
+                    <p class="credits-tech">
+                        <span>🛠️ Creado con <strong>Antigravity</strong> y tecnología de <strong>GitHub</strong></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
