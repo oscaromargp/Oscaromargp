@@ -54,6 +54,49 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 24px;
+}
+
+.urgency-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 12px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.urgency-badge .badge-icon {
+    font-size: 1.25rem;
+}
+
+.urgency-badge strong {
+    color: #22C55E;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.guarantee-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+}
+
+.guarantee-badge i {
+    color: var(--primary-400);
 }
 
 .hero-ctas .btn-primary,

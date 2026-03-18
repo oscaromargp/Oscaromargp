@@ -157,7 +157,7 @@ function initScrollAnimations() {
  * Counts up to target number
  */
 function initCounters() {
-    const counters = document.querySelectorAll('.stat-number');
+    const counters = document.querySelectorAll('.stat-number[data-target]');
     
     const observerOptions = {
         threshold: 0.5
@@ -166,8 +166,11 @@ function initCounters() {
     const counterObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-target'));
-                animateCounter(entry.target, target);
+                const targetAttr = entry.target.getAttribute('data-target');
+                const target = parseInt(targetAttr);
+                if (!isNaN(target)) {
+                    animateCounter(entry.target, target);
+                }
                 counterObserver.unobserve(entry.target);
             }
         });

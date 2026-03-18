@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="legal.css">
     <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="particles-container" id="particles"></div>
@@ -22,10 +23,15 @@
                 <span class="logo-text">OSCAR<span class="gradient-text">OMARGP</span></span>
             </a>
             <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
                 <li><a href="../index.html#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="../index.html#casos" class="nav-link">Casos</a></li>
+                <li><a href="../index.html#faq" class="nav-link">FAQ</a></li>
                 <li><a href="../index.html#contacto" class="nav-link">Contacto</a></li>
             </ul>
+            <a href="https://wa.me/526121078075" target="_blank" class="btn-whatsapp-nav">
+                <i class="fab fa-whatsapp"></i> Chatear
+            </a>
             <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menú">
                 <span></span><span></span><span></span>
             </button>
@@ -144,21 +150,53 @@
                 <div class="footer-brand">
                     <span class="logo-text-footer">OSCAR<span class="gradient-text">OMARGP</span></span>
                     <p class="footer-desc">Agencia de Consultoría y Soluciones Digitales</p>
+                    <p class="footer-location">🌐 Operación remota global</p>
+                    <p class="footer-slogan">"Libertad mediante estructura. Seguridad mediante control. Impacto mediante eficiencia."</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="../servicios/diseno-grafico.html">Diseño Gráfico</a></li>
+                        <li><a href="../servicios/desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="../servicios/automatizacion.html">Automatización</a></li>
+                        <li><a href="../servicios/marketing-digital.html">Marketing Digital</a></li>
+                    </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="terminos.html">Términos</a></li>
-                        <li><a href="privacidad.html">Privacidad</a></li>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="https://wa.me/526121078075" target="_blank">WhatsApp</a></li>
+                        <li><a href="mailto:oscaromargp@gmail.com">Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 OSCAROMARGP. Todos los derechos reservados.</p>
+                <div class="credits">
+                    <p class="credits-main">&copy; 2026 OSCAROMARGP. Todos los derechos reservados.</p>
+                    <p class="credits-tech">
+                        <span>🛠️ Creado con <strong>Antigravity</strong> y tecnología de <strong>GitHub</strong></span>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="../script.js"></script>
+    
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es,pt,fr,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
