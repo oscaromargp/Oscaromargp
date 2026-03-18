@@ -222,6 +222,32 @@ a {
     transition: all 0.3s ease;
 }
 
+/* WhatsApp Nav Button */
+.btn-whatsapp-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.btn-whatsapp-nav:hover {
+    background: linear-gradient(135deg, #16A34A 0%, #22C55E 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+}
+
+.btn-whatsapp-nav i {
+    font-size: 1.1rem;
+}
+
 /* ========================================
    PARTICLES BACKGROUND
    ======================================== */
@@ -375,6 +401,25 @@ a {
 }
 
 .btn-secondary:hover {
+    border-color: var(--primary-400);
+    color: var(--primary-400);
+    transform: translateY(-2px);
+}
+
+.btn-tertiary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-tertiary:hover {
     border-color: var(--primary-400);
     color: var(--primary-400);
     transform: translateY(-2px);
