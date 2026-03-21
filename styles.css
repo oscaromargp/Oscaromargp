@@ -1462,6 +1462,475 @@ a {
 }
 
 /* ========================================
+   HERO BADGES
+   ======================================== */
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 100px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.hero-badge-accent {
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.3);
+    color: var(--primary-400);
+}
+
+.badge-icon {
+    font-size: 0.875rem;
+}
+
+/* ========================================
+   PRESENCIA DIGITAL
+   ======================================== */
+.presencia-digital {
+    padding: 120px 0;
+    background: var(--bg-secondary);
+}
+
+.presencia-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 64px;
+}
+
+.presencia-card {
+    text-align: center;
+    padding: 32px 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.presencia-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.presencia-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 16px;
+    border-radius: 16px;
+}
+
+.presencia-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.presencia-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+}
+
+.presencia-card p {
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+}
+
+.presencia-link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--primary-400);
+}
+
+/* ========================================
+   MEDIOS GOBIERNO
+   ======================================== */
+.medios-gobierno {
+    padding: 48px;
+    background: rgba(168, 85, 247, 0.03);
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    border-radius: 24px;
+}
+
+.section-header-mini {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.08) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 100px;
+    color: var(--primary-400);
+    margin-bottom: 24px;
+}
+
+.subsection-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.medios-intro {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.medios-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.medios-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.medio-item {
+    padding: 24px;
+}
+
+.medio-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.medio-icon {
+    font-size: 1.75rem;
+}
+
+.medio-header h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.medio-periodo {
+    font-size: 0.8125rem;
+    color: var(--primary-400);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.medio-desc {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.medio-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.medio-link {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--primary-400);
+    padding: 8px 16px;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.medio-link:hover {
+    background: rgba(168, 85, 247, 0.2);
+    color: var(--primary-300);
+}
+
+.medio-list {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.medio-list li {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    padding: 4px 0;
+}
+
+.medio-note {
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 100px;
+    color: #22C55E;
+}
+
+/* ========================================
+   COTIZA AHORA
+   ======================================== */
+.cotiza-ahora {
+    padding: 120px 0;
+}
+
+.urgency-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 12px;
+    color: #F59E0B;
+    margin-top: 24px;
+}
+
+.urgency-icon {
+    font-size: 1.25rem;
+}
+
+.formularios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.formulario-card {
+    padding: 24px;
+}
+
+.formulario-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.125rem;
+    margin-bottom: 12px;
+}
+
+.form-icon {
+    font-size: 1.5rem;
+}
+
+.formulario-card p {
+    font-size: 0.9375rem;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+}
+
+.formulario-card iframe {
+    border-radius: 12px;
+    min-height: 500px;
+    background: var(--bg-tertiary);
+}
+
+.whatsapp-alternative {
+    text-align: center;
+    padding: 32px;
+    background: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.15);
+    border-radius: 16px;
+}
+
+.whatsapp-alternative p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 18px 36px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+}
+
+.btn-whatsapp-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
+}
+
+.btn-whatsapp-large i {
+    font-size: 1.5rem;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+}
+
+/* ========================================
+   WHATSAPP FLOATING BUTTON
+   ======================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    z-index: 999;
+    box-shadow: 0 4px 24px rgba(34, 197, 94, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.5);
+}
+
+@keyframes pulse-whatsapp {
+    0%, 100% {
+        box-shadow: 0 4px 24px rgba(34, 197, 94, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 24px rgba(34, 197, 94, 0.6), 0 0 0 12px rgba(34, 197, 94, 0.1);
+    }
+}
+
+/* ========================================
+   RESPONSIVE - PRESENCIA Y FORMULARIOS
+   ======================================== */
+@media (max-width: 1023px) {
+    .presencia-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .formularios-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .formulario-card iframe {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-badges {
+        gap: 8px;
+    }
+    
+    .hero-badge {
+        font-size: 0.6875rem;
+        padding: 6px 10px;
+    }
+    
+    .presencia-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .presencia-card {
+        padding: 24px 16px;
+    }
+    
+    .presencia-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .presencia-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .presencia-card h3 {
+        font-size: 1rem;
+    }
+    
+    .medios-gobierno {
+        padding: 32px 24px;
+    }
+    
+    .medios-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .subsection-title {
+        font-size: 1.375rem;
+    }
+    
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .trust-badge {
+        font-size: 0.75rem;
+        padding: 10px 16px;
+    }
+    
+    .formulario-card iframe {
+        min-height: 500px;
+    }
+    
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        font-size: 1.75rem;
+        bottom: 16px;
+        right: 16px;
+    }
+}
+
+/* ========================================
    ANIMATIONS - Scroll Reveal
    ======================================== */
 .reveal {
