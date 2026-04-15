@@ -253,14 +253,15 @@ La landing page cuenta con **10 secciones** documentadas a continuación:
 | **Estructura** | Rating 5★, Texto, Avatar, Nombre, Rol |
 | **Estilo** | Glass cards |
 
-### 7. Cotiza Ahora (Formularios)
-
-| Atributo | Detalle |
-|----------|---------|
-| **Tipo** | Nueva sección con 3 iframes de Google Forms |
-| **Formularios** | Contacto General, Cotización Diseño Editorial, Briefing Identidad Corporativa |
-| **Urgencia** | Nota sobre "3 slots disponibles esta semana" |
-| **Alternativa** | Botón WhatsApp grande |
+### 7. Cotiza Ahora (Formularios Nativos)
++
++| Atributo | Detalle |
++|----------|---------|
++| **Tipo** | Sistema de TABS con iconos (Native HTML/CSS + Web3Forms) |
++| **Formularios** | 3 pestañas: Contacto General, Cotización Diseño Editorial, Briefing Identidad Corporativa |
++| **Urgencia** | Nota sobre "3 slots disponibles esta semana" |
++| **Alternativa** | Botón WhatsApp grande |
++| **UX** | Optimizado para móvil (solo 1 form visible a la vez) |
 
 ### 8. FAQ (Preguntas Frecuentes)
 
@@ -332,6 +333,58 @@ official document style, modern typography.
 ---
 
 ## Logs de Versiones
+
+### v4.3.0 - Premium Visuals Upgrade (15 Abril 2026)
+
+**Commit:** v4.3.0: Premium project previews + responsive fixes
+**Fecha:** 15 Abril 2026
+**Tipo:** Feature / UI Upgrade
+
+#### Cambios Implementados
+
+| Cambio | Descripción |
+|--------|-------------|
+| ✅ | **Imágenes de Previsualización Premium** en Casos de Éxito |
+| ✅ | **Efectos de Hover Dinámicos** (Zoom suave 1.08x) |
+| ✅ | **Fallback de Gradientes** para proyectos sin imagen |
+| ✅ | **Estructura Interna Card** refactorizada (.caso-content) |
+
+---
+
+### v4.2.0 - UX & Conversion Optimization (15 Abril 2026)
+
+**Commit:** v4.2.0: UX mejora formularios con tabs iconos + Web3Forms key
+**Fecha:** 15 Abril 2026
+**Tipo:** UX / Conversion
+
+#### Cambios Implementados
+
+| Cambio | Descripción |
+|--------|-------------|
+| ✅ | **Sistema de Tabs con Íconos** para formularios (Contacto, Cotización, Briefing) |
+| ✅ | **Formularios Nativos Premium** (Adiós Google Forms iframes) |
+| ✅ | **Integración Web3Forms** funcional con API Key real |
+| ✅ | **Corrección de Textos** (Inglés -> Español, Fechas 2026) |
+
+---
+
+### v4.1.0 - Assets & SEO (15 Abril 2026)
+
+**Commit:** v4.1.0: Correcciones críticas + optimizaciones completas
+**Fecha:** 15 Abril 2026
+**Tipo:** Bugfix / SEO
+
+#### Cambios Implementados
+
+| Cambio | Descripción |
+|--------|-------------|
+| ✅ | **Generación de Assets Faltantes** (Logo, OG Image, Favicon) |
+| ✅ | **SEO Structured Data** (Schema.org) |
+| ✅ | **Tipografía Responsiva** con clamp() |
+| ✅ | **FAQ Transiciones Suaves** (max-height) |
+| ✅ | **Widget Translate** posicionado correctamente (left side) |
+
+---
 
 ### v4.0.0 - Versión Completa (20 Marzo 2026)
 
