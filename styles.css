@@ -1734,6 +1734,110 @@ a {
     margin-bottom: 48px;
 }
 
+/* ========================================
+   FORM TABS SYSTEM
+   ======================================== */
+.form-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.form-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(168, 85, 247, 0.12);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-tertiary);
+    font-family: 'Inter', sans-serif;
+    min-width: 140px;
+}
+
+.form-tab:hover {
+    border-color: rgba(168, 85, 247, 0.35);
+    background: rgba(168, 85, 247, 0.06);
+    transform: translateY(-2px);
+}
+
+.form-tab.active {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(168, 85, 247, 0.06) 100%);
+    border-color: var(--primary-400);
+    color: var(--text-primary);
+    box-shadow: 0 0 24px rgba(168, 85, 247, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.form-tab-icon {
+    font-size: 2rem;
+    filter: grayscale(0.5);
+    transition: filter 0.3s ease;
+}
+
+.form-tab.active .form-tab-icon {
+    filter: grayscale(0) drop-shadow(0 0 12px rgba(168, 85, 247, 0.5));
+}
+
+.form-tab-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* Form Panels */
+.form-panels {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.form-panel {
+    display: none;
+    animation: fadeInPanel 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.form-panel.active {
+    display: block;
+}
+
+@keyframes fadeInPanel {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive tabs */
+@media (max-width: 767px) {
+    .form-tabs {
+        gap: 10px;
+    }
+    
+    .form-tab {
+        padding: 16px 20px;
+        min-width: 100px;
+        border-radius: 16px;
+    }
+    
+    .form-tab-icon {
+        font-size: 1.75rem;
+    }
+    
+    .form-tab-label {
+        font-size: 0.6875rem;
+    }
+}
+
 .formulario-card {
     padding: 24px;
 }

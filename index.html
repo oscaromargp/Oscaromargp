@@ -604,155 +604,178 @@
                 </div>
             </div>
             
-            <div class="formularios-grid">
-                <!-- Formulario 1: Contacto General -->
-                <div class="formulario-card glass-card">
-                    <h3>
-                        <span class="form-icon">📧</span>
-                        Formulario de Contacto General
-                    </h3>
-                    <p>Cuéntame sobre tu proyecto y te contacto en menos de 24 horas.</p>
-                    <form class="premium-form" id="formContacto" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="TU_WEB3FORMS_KEY">
-                        <input type="hidden" name="subject" value="Nuevo contacto desde OSCAROMARGP">
-                        <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
-                        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
-                        <div class="form-group">
-                            <label for="contactNombre">Nombre completo *</label>
-                            <input type="text" id="contactNombre" name="nombre" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="contactEmail">Email *</label>
-                            <input type="email" id="contactEmail" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="contactTel">WhatsApp / Teléfono</label>
-                            <input type="tel" id="contactTel" name="telefono" placeholder="+52 612 107 8075">
-                        </div>
-                        <div class="form-group">
-                            <label for="contactServicio">Servicio de interés</label>
-                            <select id="contactServicio" name="servicio">
-                                <option value="">Selecciona uno...</option>
-                                <option value="diseño-grafico">Diseño Gráfico y Branding</option>
-                                <option value="desarrollo-web">Desarrollo Web</option>
-                                <option value="automatizacion">Automatización</option>
-                                <option value="marketing">Marketing Digital</option>
-                                <option value="audiovisual">Producción Audiovisual</option>
-                                <option value="consultoria">Consultoría</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMensaje">Mensaje *</label>
-                            <textarea id="contactMensaje" name="mensaje" rows="4" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-form">
-                            <span class="btn-icon">📧</span> Enviar Mensaje
-                        </button>
-                        <div class="form-status" id="formContactoStatus"></div>
-                    </form>
+            <!-- Form Tab Selector -->
+            <div class="form-tabs">
+                <button class="form-tab active" data-form="formContacto" aria-selected="true">
+                    <span class="form-tab-icon">📧</span>
+                    <span class="form-tab-label">Contacto</span>
+                </button>
+                <button class="form-tab" data-form="formCotizacion" aria-selected="false">
+                    <span class="form-tab-icon">🎨</span>
+                    <span class="form-tab-label">Cotización</span>
+                </button>
+                <button class="form-tab" data-form="formBriefing" aria-selected="false">
+                    <span class="form-tab-icon">✨</span>
+                    <span class="form-tab-label">Briefing</span>
+                </button>
+            </div>
+
+            <!-- Forms Container (1 visible at a time) -->
+            <div class="form-panels">
+                <!-- Panel 1: Contacto General -->
+                <div class="form-panel active" id="panelContacto">
+                    <div class="formulario-card glass-card">
+                        <h3>
+                            <span class="form-icon">📧</span>
+                            Formulario de Contacto General
+                        </h3>
+                        <p>Cuéntame sobre tu proyecto y te contacto en menos de 24 horas.</p>
+                        <form class="premium-form" id="formContacto" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="4dc05499-5ca7-4d3a-89b7-cee783c98efc">
+                            <input type="hidden" name="subject" value="Nuevo contacto desde OSCAROMARGP">
+                            <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
+                            <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="form-group">
+                                <label for="contactNombre">Nombre completo *</label>
+                                <input type="text" id="contactNombre" name="nombre" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email *</label>
+                                <input type="email" id="contactEmail" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactTel">WhatsApp / Teléfono</label>
+                                <input type="tel" id="contactTel" name="telefono" placeholder="+52 612 107 8075">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactServicio">Servicio de interés</label>
+                                <select id="contactServicio" name="servicio">
+                                    <option value="">Selecciona uno...</option>
+                                    <option value="diseño-grafico">Diseño Gráfico y Branding</option>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="automatizacion">Automatización</option>
+                                    <option value="marketing">Marketing Digital</option>
+                                    <option value="audiovisual">Producción Audiovisual</option>
+                                    <option value="consultoria">Consultoría</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMensaje">Mensaje *</label>
+                                <textarea id="contactMensaje" name="mensaje" rows="4" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-form">
+                                <span class="btn-icon">📧</span> Enviar Mensaje
+                            </button>
+                            <div class="form-status" id="formContactoStatus"></div>
+                        </form>
+                    </div>
                 </div>
 
-                <!-- Formulario 2: Cotización Editorial -->
-                <div class="formulario-card glass-card">
-                    <h3>
-                        <span class="form-icon">🎨</span>
-                        Cotización de Diseño Gráfico Editorial
-                    </h3>
-                    <p>Solicita una cotización para proyectos de diseño editorial, imprenta o publicaciones.</p>
-                    <form class="premium-form" id="formCotizacion" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="TU_WEB3FORMS_KEY">
-                        <input type="hidden" name="subject" value="Cotización Editorial - OSCAROMARGP">
-                        <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
-                        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
-                        <div class="form-group">
-                            <label for="cotNombre">Nombre completo *</label>
-                            <input type="text" id="cotNombre" name="nombre" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="cotEmail">Email *</label>
-                            <input type="email" id="cotEmail" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="cotTipo">Tipo de proyecto</label>
-                            <select id="cotTipo" name="tipo_proyecto">
-                                <option value="">Selecciona uno...</option>
-                                <option value="logotipo">Logotipo / Identidad Visual</option>
-                                <option value="editorial">Diseño Editorial (Revista, Periódico)</option>
-                                <option value="publicidad">Material Publicitario</option>
-                                <option value="informe">Informe de Gobierno / Institucional</option>
-                                <option value="empaque">Empaque / Packaging</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="cotPresupuesto">Presupuesto estimado</label>
-                            <select id="cotPresupuesto" name="presupuesto">
-                                <option value="">Selecciona rango...</option>
-                                <option value="3k-5k">$3,000 - $5,000 MXN</option>
-                                <option value="5k-10k">$5,000 - $10,000 MXN</option>
-                                <option value="10k-25k">$10,000 - $25,000 MXN</option>
-                                <option value="25k+">$25,000+ MXN</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="cotDetalles">Detalles del proyecto *</label>
-                            <textarea id="cotDetalles" name="detalles" rows="4" required placeholder="Describe tu proyecto editorial..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-form">
-                            <span class="btn-icon">🎨</span> Solicitar Cotización
-                        </button>
-                        <div class="form-status" id="formCotizacionStatus"></div>
-                    </form>
+                <!-- Panel 2: Cotización Editorial -->
+                <div class="form-panel" id="panelCotizacion">
+                    <div class="formulario-card glass-card">
+                        <h3>
+                            <span class="form-icon">🎨</span>
+                            Cotización de Diseño Gráfico Editorial
+                        </h3>
+                        <p>Solicita una cotización para proyectos de diseño editorial, imprenta o publicaciones.</p>
+                        <form class="premium-form" id="formCotizacion" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="4dc05499-5ca7-4d3a-89b7-cee783c98efc">
+                            <input type="hidden" name="subject" value="Cotización Editorial - OSCAROMARGP">
+                            <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
+                            <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="form-group">
+                                <label for="cotNombre">Nombre completo *</label>
+                                <input type="text" id="cotNombre" name="nombre" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="cotEmail">Email *</label>
+                                <input type="email" id="cotEmail" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="cotTipo">Tipo de proyecto</label>
+                                <select id="cotTipo" name="tipo_proyecto">
+                                    <option value="">Selecciona uno...</option>
+                                    <option value="logotipo">Logotipo / Identidad Visual</option>
+                                    <option value="editorial">Diseño Editorial (Revista, Periódico)</option>
+                                    <option value="publicidad">Material Publicitario</option>
+                                    <option value="informe">Informe de Gobierno / Institucional</option>
+                                    <option value="empaque">Empaque / Packaging</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cotPresupuesto">Presupuesto estimado</label>
+                                <select id="cotPresupuesto" name="presupuesto">
+                                    <option value="">Selecciona rango...</option>
+                                    <option value="3k-5k">$3,000 - $5,000 MXN</option>
+                                    <option value="5k-10k">$5,000 - $10,000 MXN</option>
+                                    <option value="10k-25k">$10,000 - $25,000 MXN</option>
+                                    <option value="25k+">$25,000+ MXN</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cotDetalles">Detalles del proyecto *</label>
+                                <textarea id="cotDetalles" name="detalles" rows="4" required placeholder="Describe tu proyecto editorial..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-form">
+                                <span class="btn-icon">🎨</span> Solicitar Cotización
+                            </button>
+                            <div class="form-status" id="formCotizacionStatus"></div>
+                        </form>
+                    </div>
                 </div>
 
-                <!-- Formulario 3: Briefing Creativo -->
-                <div class="formulario-card glass-card">
-                    <h3>
-                        <span class="form-icon">✨</span>
-                        Briefing Creativo - Identidad Corporativa
-                    </h3>
-                    <p>Inicia el proceso completo para crear o rediseñar la identidad visual de tu marca.</p>
-                    <form class="premium-form" id="formBriefing" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="TU_WEB3FORMS_KEY">
-                        <input type="hidden" name="subject" value="Briefing Creativo - OSCAROMARGP">
-                        <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
-                        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
-                        <div class="form-group">
-                            <label for="briNombre">Nombre / Empresa *</label>
-                            <input type="text" id="briNombre" name="nombre" required placeholder="Nombre de tu marca o empresa">
-                        </div>
-                        <div class="form-group">
-                            <label for="briEmail">Email *</label>
-                            <input type="email" id="briEmail" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="briGiro">Giro del negocio</label>
-                            <input type="text" id="briGiro" name="giro" placeholder="Ej: Restaurante, Tecnología, Salud...">
-                        </div>
-                        <div class="form-group">
-                            <label for="briEstilo">Estilo visual que buscas</label>
-                            <select id="briEstilo" name="estilo">
-                                <option value="">Selecciona uno...</option>
-                                <option value="moderno">Moderno y Minimalista</option>
-                                <option value="corporativo">Corporativo y Profesional</option>
-                                <option value="creativo">Creativo y Artístico</option>
-                                <option value="elegante">Elegante y Premium</option>
-                                <option value="juvenil">Juvenil y Dinámico</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="briColores">Colores de preferencia</label>
-                            <input type="text" id="briColores" name="colores" placeholder="Ej: Azul corporativo, dorado...">
-                        </div>
-                        <div class="form-group">
-                            <label for="briVisión">Visión de tu marca *</label>
-                            <textarea id="briVisión" name="vision" rows="4" required placeholder="¿Qué quieres transmitir con tu identidad visual?"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-form">
-                            <span class="btn-icon">✨</span> Enviar Briefing
-                        </button>
-                        <div class="form-status" id="formBriefingStatus"></div>
-                    </form>
+                <!-- Panel 3: Briefing Creativo -->
+                <div class="form-panel" id="panelBriefing">
+                    <div class="formulario-card glass-card">
+                        <h3>
+                            <span class="form-icon">✨</span>
+                            Briefing Creativo - Identidad Corporativa
+                        </h3>
+                        <p>Inicia el proceso completo para crear o rediseñar la identidad visual de tu marca.</p>
+                        <form class="premium-form" id="formBriefing" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="4dc05499-5ca7-4d3a-89b7-cee783c98efc">
+                            <input type="hidden" name="subject" value="Briefing Creativo - OSCAROMARGP">
+                            <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
+                            <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="form-group">
+                                <label for="briNombre">Nombre / Empresa *</label>
+                                <input type="text" id="briNombre" name="nombre" required placeholder="Nombre de tu marca o empresa">
+                            </div>
+                            <div class="form-group">
+                                <label for="briEmail">Email *</label>
+                                <input type="email" id="briEmail" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="briGiro">Giro del negocio</label>
+                                <input type="text" id="briGiro" name="giro" placeholder="Ej: Restaurante, Tecnología, Salud...">
+                            </div>
+                            <div class="form-group">
+                                <label for="briEstilo">Estilo visual que buscas</label>
+                                <select id="briEstilo" name="estilo">
+                                    <option value="">Selecciona uno...</option>
+                                    <option value="moderno">Moderno y Minimalista</option>
+                                    <option value="corporativo">Corporativo y Profesional</option>
+                                    <option value="creativo">Creativo y Artístico</option>
+                                    <option value="elegante">Elegante y Premium</option>
+                                    <option value="juvenil">Juvenil y Dinámico</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="briColores">Colores de preferencia</label>
+                                <input type="text" id="briColores" name="colores" placeholder="Ej: Azul corporativo, dorado...">
+                            </div>
+                            <div class="form-group">
+                                <label for="briVision">Visión de tu marca *</label>
+                                <textarea id="briVision" name="vision" rows="4" required placeholder="¿Qué quieres transmitir con tu identidad visual?"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-form">
+                                <span class="btn-icon">✨</span> Enviar Briefing
+                            </button>
+                            <div class="form-status" id="formBriefingStatus"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
 

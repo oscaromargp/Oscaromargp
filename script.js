@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initFAQ();
     initForms();
+    initFormTabs();
 });
 
 /**
@@ -421,6 +422,51 @@ function initForms() {
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
+            }
+        });
+    });
+}
+
+/**
+ * Form Tabs
+ * Switch between form panels with icon tabs
+ */
+function initFormTabs() {
+    const tabs = document.querySelectorAll('.form-tab');
+    const panels = document.querySelectorAll('.form-panel');
+    
+    if (!tabs.length || !panels.length) return;
+    
+    const formToPanelMap = {
+        'formContacto': 'panelContacto',
+        'formCotizacion': 'panelCotizacion',
+        'formBriefing': 'panelBriefing'
+    };
+    
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const formId = tab.getAttribute('data-form');
+            const panelId = formToPanelMap[formId];
+            
+            // Deactivate all tabs
+            tabs.forEach(function(t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            
+            // Deactivate all panels
+            panels.forEach(function(p) {
+                p.classList.remove('active');
+            });
+            
+            // Activate clicked tab
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            
+            // Activate corresponding panel
+            var panel = document.getElementById(panelId);
+            if (panel) {
+                panel.classList.add('active');
             }
         });
     });
