@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSCAROMARGP | Diseño Gráfico, Branding y Editorial (Desde 2015)</title>
+    <meta name="theme-color" content="#A855F7">
     <meta name="description" content="Diseñador gráfico profesional desde 2015. Acreditado en Diario de Acayucan, informes gubernamentales y publicaciones editoriales. Diseño, branding, editorial y presencia digital completa.">
     <meta name="keywords" content="diseño gráfico, branding, editorial, Diario de Acayucan, informes de gobierno, Acayucan, identidad visual, logotipo">
     <meta name="author" content="Oscar Omar Gómez Peña">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://oscaromargp.github.io/Oscaromargp/">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -28,11 +30,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
     <!-- Particles Background -->
@@ -80,7 +83,7 @@
                     </span>
                     <span class="hero-badge hero-badge-accent">
                         <span class="badge-icon">🎨</span>
-                        Desde 2015 en Diseño Gráfico y Editorial
+                        Desde 2015 en Diseño Gráfico y Editorial (+11 años)
                     </span>
                 </div>
                 <span class="hero-label">
@@ -343,7 +346,7 @@
                     </div>
                     <p class="caso-sector">Sector Comercial y Servicios</p>
                     <p class="caso-desc">Identidad visual, gigantografías, publicidad y automatización de fichas de inscripción y vales.</p>
-                    <a href="#" target="_blank" class="caso-link">Ver proyecto →</a>
+                    <a href="https://wa.me/526121078075?text=Hola%20Oscar%2C%20me%20interesa%20ver%20el%20proyecto%20de%20Barber%C3%ADa%20Barba%20Negra" target="_blank" class="caso-link">Consultar proyecto →</a>
                 </div>
                 <div class="caso-card glass-card">
                     <div class="caso-header">
@@ -381,7 +384,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Presencia Digital</span>
-                <h2 class="section-title">Mi Huella Completa en <span class="gradient-text">Diseño Gráfico (2015 – 2025)</span></h2>
+                <h2 class="section-title">Mi Huella Completa en <span class="gradient-text">Diseño Gráfico (2015 – 2026)</span></h2>
                 <p class="section-subtitle">
                     Todo mi trabajo freelance, agencia, medios impresos y gobierno local en un solo lugar.
                 </p>
@@ -602,31 +605,154 @@
             </div>
             
             <div class="formularios-grid">
+                <!-- Formulario 1: Contacto General -->
                 <div class="formulario-card glass-card">
                     <h3>
                         <span class="form-icon">📧</span>
                         Formulario de Contacto General
                     </h3>
                     <p>Cuéntame sobre tu proyecto y te contacto en menos de 24 horas.</p>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeaOsQGVz7dzyFAvy8_ekKtogXNmS7fWsCxBGp3tvI4pDzbGQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <form class="premium-form" id="formContacto" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="TU_WEB3FORMS_KEY">
+                        <input type="hidden" name="subject" value="Nuevo contacto desde OSCAROMARGP">
+                        <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
+                        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="form-group">
+                            <label for="contactNombre">Nombre completo *</label>
+                            <input type="text" id="contactNombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactTel">WhatsApp / Teléfono</label>
+                            <input type="tel" id="contactTel" name="telefono" placeholder="+52 612 107 8075">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactServicio">Servicio de interés</label>
+                            <select id="contactServicio" name="servicio">
+                                <option value="">Selecciona uno...</option>
+                                <option value="diseño-grafico">Diseño Gráfico y Branding</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="automatizacion">Automatización</option>
+                                <option value="marketing">Marketing Digital</option>
+                                <option value="audiovisual">Producción Audiovisual</option>
+                                <option value="consultoria">Consultoría</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMensaje">Mensaje *</label>
+                            <textarea id="contactMensaje" name="mensaje" rows="4" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-form">
+                            <span class="btn-icon">📧</span> Enviar Mensaje
+                        </button>
+                        <div class="form-status" id="formContactoStatus"></div>
+                    </form>
                 </div>
 
+                <!-- Formulario 2: Cotización Editorial -->
                 <div class="formulario-card glass-card">
                     <h3>
                         <span class="form-icon">🎨</span>
                         Cotización de Diseño Gráfico Editorial
                     </h3>
                     <p>Solicita una cotización para proyectos de diseño editorial, imprenta o publicaciones.</p>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdV_VhwKrrnJ1cxKe2ZKv8OPlLyCTQ5GaPJboAQdgBr1WOEDg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <form class="premium-form" id="formCotizacion" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="TU_WEB3FORMS_KEY">
+                        <input type="hidden" name="subject" value="Cotización Editorial - OSCAROMARGP">
+                        <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
+                        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="form-group">
+                            <label for="cotNombre">Nombre completo *</label>
+                            <input type="text" id="cotNombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="cotEmail">Email *</label>
+                            <input type="email" id="cotEmail" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="cotTipo">Tipo de proyecto</label>
+                            <select id="cotTipo" name="tipo_proyecto">
+                                <option value="">Selecciona uno...</option>
+                                <option value="logotipo">Logotipo / Identidad Visual</option>
+                                <option value="editorial">Diseño Editorial (Revista, Periódico)</option>
+                                <option value="publicidad">Material Publicitario</option>
+                                <option value="informe">Informe de Gobierno / Institucional</option>
+                                <option value="empaque">Empaque / Packaging</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cotPresupuesto">Presupuesto estimado</label>
+                            <select id="cotPresupuesto" name="presupuesto">
+                                <option value="">Selecciona rango...</option>
+                                <option value="3k-5k">$3,000 - $5,000 MXN</option>
+                                <option value="5k-10k">$5,000 - $10,000 MXN</option>
+                                <option value="10k-25k">$10,000 - $25,000 MXN</option>
+                                <option value="25k+">$25,000+ MXN</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cotDetalles">Detalles del proyecto *</label>
+                            <textarea id="cotDetalles" name="detalles" rows="4" required placeholder="Describe tu proyecto editorial..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-form">
+                            <span class="btn-icon">🎨</span> Solicitar Cotización
+                        </button>
+                        <div class="form-status" id="formCotizacionStatus"></div>
+                    </form>
                 </div>
 
+                <!-- Formulario 3: Briefing Creativo -->
                 <div class="formulario-card glass-card">
                     <h3>
                         <span class="form-icon">✨</span>
                         Briefing Creativo - Identidad Corporativa
                     </h3>
                     <p>Inicia el proceso completo para crear o rediseñar la identidad visual de tu marca.</p>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeP-cZNm-6b6OvMBLHKzZeg9eVzaMYwbSHbhQEAHxsVHwBEsg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <form class="premium-form" id="formBriefing" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="TU_WEB3FORMS_KEY">
+                        <input type="hidden" name="subject" value="Briefing Creativo - OSCAROMARGP">
+                        <input type="hidden" name="from_name" value="Portafolio OSCAROMARGP">
+                        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="form-group">
+                            <label for="briNombre">Nombre / Empresa *</label>
+                            <input type="text" id="briNombre" name="nombre" required placeholder="Nombre de tu marca o empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="briEmail">Email *</label>
+                            <input type="email" id="briEmail" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="briGiro">Giro del negocio</label>
+                            <input type="text" id="briGiro" name="giro" placeholder="Ej: Restaurante, Tecnología, Salud...">
+                        </div>
+                        <div class="form-group">
+                            <label for="briEstilo">Estilo visual que buscas</label>
+                            <select id="briEstilo" name="estilo">
+                                <option value="">Selecciona uno...</option>
+                                <option value="moderno">Moderno y Minimalista</option>
+                                <option value="corporativo">Corporativo y Profesional</option>
+                                <option value="creativo">Creativo y Artístico</option>
+                                <option value="elegante">Elegante y Premium</option>
+                                <option value="juvenil">Juvenil y Dinámico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="briColores">Colores de preferencia</label>
+                            <input type="text" id="briColores" name="colores" placeholder="Ej: Azul corporativo, dorado...">
+                        </div>
+                        <div class="form-group">
+                            <label for="briVisión">Visión de tu marca *</label>
+                            <textarea id="briVisión" name="vision" rows="4" required placeholder="¿Qué quieres transmitir con tu identidad visual?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-form">
+                            <span class="btn-icon">✨</span> Enviar Briefing
+                        </button>
+                        <div class="form-status" id="formBriefingStatus"></div>
+                    </form>
                 </div>
             </div>
 
@@ -672,7 +798,7 @@
                         <h3>¿Cuál es la forma de pago?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Para iniciar cualquier proyecto se solicita el <strong>50% del monto total como anticipo</strong>. El remaining 50% se paga contra entrega final o en parcialidades acordadas. Aceptamos transferencia, PayPal y crypto.</p>
+                        <p>Para iniciar cualquier proyecto se solicita el <strong>50% del monto total como anticipo</strong>. El 50% restante se paga contra entrega final o en parcialidades acordadas. Aceptamos transferencia, PayPal y crypto.</p>
                     </div>
                 </div>
                 <div class="faq-item glass-card">
@@ -792,7 +918,7 @@
                         <span>📅</span> Agendar Cita
                     </a>
                 </div>
-                <p class="cta-urgency">📱 Available Monday to Sunday | ⚡ 3 slots disponibles esta semana</p>
+                <p class="cta-urgency">📱 Disponible de Lunes a Domingo | ⚡ 3 slots disponibles esta semana</p>
             </div>
         </div>
     </section>
@@ -864,47 +990,35 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     
-    <!-- Google Translate Widget -->
-    <div id="google_translate_element" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"></div>
+    <!-- Google Translate Widget - Moved to left side to avoid WhatsApp float conflict -->
+    <div id="google_translate_element" style="position: fixed; bottom: 24px; left: 24px; z-index: 9998;"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es,pt,fr,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-XXXXXXXXX-X'}, 'google_translate_element');
+            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es,pt,fr,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
-    <!-- Translation Button Style -->
-    <style>
-        .goog-te-gadget {
-            font-family: 'Inter', sans-serif !important;
-            font-size: 12px !important;
-        }
-        .goog-te-gadget .goog-te-combo {
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.08) 100%) !important;
-            border: 1px solid rgba(168, 85, 247, 0.3) !important;
-            border-radius: 8px !important;
-            padding: 8px 12px !important;
-            color: #FFFFFF !important;
-            backdrop-filter: blur(12px);
-        }
-        .goog-te-gadget-simple {
-            background: transparent !important;
-            border: none !important;
-            padding: 0 !important;
-        }
-        .goog-te-gadget-simple span {
-            color: #E4E4E7 !important;
-            border: none !important;
-        }
-        .goog-te-menu-value span {
-            color: #FFFFFF !important;
-        }
-        .goog-te-banner-frame {
-            display: none !important;
-        }
-        body { top: 0 !important; }
-        .skiptranslate { display: none !important; }
-        #goog-gt-tt { display: none !important; }
-    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "OSCAROMARGP",
+        "description": "Diseñador gráfico profesional desde 2015. Diseño, branding, editorial y presencia digital completa.",
+        "url": "https://oscaromargp.github.io/Oscaromargp/",
+        "image": "https://oscaromargp.github.io/Oscaromargp/images/og-image.png",
+        "telephone": "+526121078075",
+        "email": "oscaromargp@gmail.com",
+        "founder": {
+            "@type": "Person",
+            "name": "Oscar Omar Gómez Peña",
+            "jobTitle": "Diseñador Gráfico y Emprendedor Tecnológico Digital",
+            "url": "https://github.com/oscaromargp"
+        },
+        "areaServed": "Worldwide",
+        "serviceType": ["Diseño Gráfico", "Branding", "Desarrollo Web", "Marketing Digital", "Automatización", "Producción Audiovisual"]
+    }
+    </script>
 </body>
 </html>

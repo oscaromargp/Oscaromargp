@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFlipCards();
     initSmoothScroll();
     initFAQ();
+    initForms();
 });
 
 /**
@@ -329,23 +330,98 @@ function initFAQ() {
         const answer = item.querySelector('.faq-answer');
         
         if (question && answer) {
-            // Close all by default
-            answer.style.display = 'none';
+            // Set up for smooth animation
+            answer.style.maxHeight = '0';
+            answer.style.overflow = 'hidden';
+            answer.style.transition = 'max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, opacity 0.3s ease';
+            answer.style.padding = '0 24px';
+            answer.style.opacity = '0';
+            
+            // Add ARIA attributes for accessibility
+            question.setAttribute('role', 'button');
+            question.setAttribute('aria-expanded', 'false');
+            question.style.cursor = 'pointer';
             
             question.addEventListener('click', function() {
-                const isOpen = answer.style.display === 'block';
+                const isOpen = question.getAttribute('aria-expanded') === 'true';
                 
                 // Close all others
                 faqItems.forEach(function(otherItem) {
+                    const otherQuestion = otherItem.querySelector('.faq-question');
                     const otherAnswer = otherItem.querySelector('.faq-answer');
                     if (otherAnswer && otherItem !== item) {
-                        otherAnswer.style.display = 'none';
+                        otherAnswer.style.maxHeight = '0';
+                        otherAnswer.style.padding = '0 24px';
+                        otherAnswer.style.opacity = '0';
+                        if (otherQuestion) otherQuestion.setAttribute('aria-expanded', 'false');
                     }
                 });
                 
                 // Toggle current
-                answer.style.display = isOpen ? 'none' : 'block';
+                if (isOpen) {
+                    answer.style.maxHeight = '0';
+                    answer.style.padding = '0 24px';
+                    answer.style.opacity = '0';
+                    question.setAttribute('aria-expanded', 'false');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+                    answer.style.padding = '16px 24px';
+                    answer.style.opacity = '1';
+                    question.setAttribute('aria-expanded', 'true');
+                }
             });
         }
+    });
+}
+
+/**
+ * Form Submission Handler
+ * Handles native form submissions via Web3Forms API
+ */
+function initForms() {
+    const forms = document.querySelectorAll('.premium-form');
+    
+    forms.forEach(function(form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const statusDiv = form.querySelector('.form-status');
+            const originalText = submitBtn.innerHTML;
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="btn-icon">⏳</span> Enviando...';
+            
+            // Reset status
+            statusDiv.className = 'form-status';
+            statusDiv.style.display = 'none';
+            
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    statusDiv.className = 'form-status success';
+                    statusDiv.textContent = '✅ ¡Mensaje enviado! Te contactaré en menos de 24 horas.';
+                    statusDiv.style.display = 'block';
+                    form.reset();
+                } else {
+                    throw new Error(result.message || 'Error al enviar');
+                }
+            } catch (error) {
+                statusDiv.className = 'form-status error';
+                statusDiv.textContent = '❌ Error al enviar. Intenta por WhatsApp: +52 612 107 8075';
+                statusDiv.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
     });
 }
