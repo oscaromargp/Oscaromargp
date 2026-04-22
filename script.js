@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQ();
     initForms();
     initFormTabs();
+    initProyectos();
 });
 
 /**
@@ -123,7 +124,7 @@ function initMobileMenu() {
  * Reveal elements on scroll using Intersection Observer
  */
 function initScrollAnimations() {
-    const revealElements = document.querySelectorAll('.servicios, .casos-exito, .testimonios, .faq, .porque-elegirnos, .contacto, .cta-final');
+    const revealElements = document.querySelectorAll('.servicios, .casos-exito, .proyectos-tecnicos, .testimonios, .faq, .porque-elegirnos, .contacto, .cta-final');
     
     const observerOptions = {
         threshold: 0.1,
@@ -469,5 +470,161 @@ function initFormTabs() {
                 panel.classList.add('active');
             }
         });
+    });
+}
+
+/**
+ * Proyectos GitHub - Hardcoded Data
+ */
+const repositorios = [
+    {
+        name: "Oscaromargp",
+        description: "Agencia & Consultoria - Portafolio profesional",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/Oscaromargp",
+        topics: ["portafolio", "diseño"]
+    },
+    {
+        name: "openbookdrive",
+        description: "Plataforma para compartir y descubrir libros - estilo Netflix",
+        language: "JavaScript",
+        url: "https://github.com/oscaromargp/openbookdrive",
+        topics: ["react", "libros", "google-drive"]
+    },
+    {
+        name: "alquimia-manual",
+        description: "Landing page premium dark mode para joyería artesanal",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/alquimia-manual",
+        topics: ["landing", "e-commerce"]
+    },
+    {
+        name: "terrazica",
+        description: "Terrazica Hostel Zicatela | Surf, WiFi 100Mbps, LGBTQ+ Friendly",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/terrazica",
+        topics: ["hostel", "turismo"]
+    },
+    {
+        name: "G5JerseysMX",
+        description: "Landing page para G5 Jerseys MX - Jerseys México 2026",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/G5JerseysMX",
+        topics: ["e-commerce", "deportes"]
+    },
+    {
+        name: "generador-landing-premium",
+        description: "Generador avanzado de Landing Pages (Dark Luxury) con n8n, SEO técnico",
+        language: null,
+        url: "https://github.com/oscaromargp/generador-landing-premium",
+        topics: ["n8n", "seo", "automation"]
+    },
+    {
+        name: "readme-github-personalizado",
+        description: "Skill para Claude, Antigravity y NoCode que genera READMEs profesionales",
+        language: null,
+        url: "https://github.com/oscaromargp/readme-github-personalizado",
+        topics: ["claude", "documentation"]
+    },
+    {
+        name: "boletin-la-buena",
+        description: "Dashboard personal diario Boletin LA BUENA",
+        language: "JavaScript",
+        url: "https://github.com/oscaromargp/boletin-la-buena",
+        topics: ["dashboard", "personal"]
+    },
+    {
+        name: "nexus-os",
+        description: "Sistema operativo web / Portfolio interactivo",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/nexus-os",
+        topics: ["portfolio", "web-os"]
+    },
+    {
+        name: "Abasto-Mayorista-de-Origen",
+        description: "Proyecto web para distribuidor mayorista",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/Abasto-Mayorista-de-Origen",
+        topics: ["e-commerce", "b2b"]
+    },
+    {
+        name: "la-calma-comunidad",
+        description: "Comunidad La Calma - Proyecto web",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/la-calma-comunidad",
+        topics: ["comunidad", "web"]
+    },
+    {
+        name: "Mandaditos-Jeshia",
+        description: "Servicio de mandaditos - Landing page",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/Mandaditos-Jeshia",
+        topics: ["servicio", "local"]
+    },
+    {
+        name: "Caba-asAlebrije",
+        description: "Proyecto turístico - Cabañas Alebrije",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/Caba-asAlebrije",
+        topics: ["turismo", "hospitality"]
+    },
+    {
+        name: "sachet-strategy-360",
+        description: "Estrategia de marketing 360 grados",
+        language: "HTML",
+        url: "https://github.com/oscaromargp/sachet-strategy-360",
+        topics: ["marketing", "strategy"]
+    }
+];
+
+const languageColors = {
+    "JavaScript": "#f7df1e",
+    "HTML": "#e34c26",
+    "CSS": "#264de4",
+    "Python": "#3572A5",
+    "TypeScript": "#2b7489",
+    "Java": "#b07219",
+    "PHP": "#4F5D95",
+    "Ruby": "#701516",
+    "Go": "#00ADD8",
+    "Rust": "#dea584",
+    "C++": "#f34b7d",
+    "C": "#555555"
+};
+
+function initProyectos() {
+    const grid = document.getElementById('proyectosGrid');
+    if (!grid) return;
+
+    repositorios.forEach(repo => {
+        const card = document.createElement('div');
+        card.className = 'proyecto-card';
+
+        const langColor = languageColors[repo.language] || '#6b7280';
+        const langBadge = repo.language 
+            ? `<span class="proyecto-lenguaje"><span class="lenguaje-dot" style="background: ${langColor}"></span>${repo.language}</span>`
+            : '';
+
+        const tags = repo.topics ? repo.topics.slice(0, 3).map(topic => 
+            `<span class="proyecto-tag">${topic}</span>`
+        ).join('') : '';
+
+        card.innerHTML = `
+            <div class="proyecto-header">
+                <a href="${repo.url}" target="_blank" class="proyecto-nombre">
+                    <i class="fab fa-github"></i> ${repo.name}
+                </a>
+                <span class="proyecto-icon"><i class="fas fa-external-link-alt"></i></span>
+            </div>
+            <p class="proyecto-desc">${repo.description}</p>
+            <div class="proyecto-meta">
+                ${langBadge}
+            </div>
+            <div class="proyecto-tags">
+                ${tags}
+            </div>
+        `;
+
+        grid.appendChild(card);
     });
 }
