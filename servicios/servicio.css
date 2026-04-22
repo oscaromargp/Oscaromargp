@@ -495,3 +495,155 @@
         justify-content: center;
     }
 }
+
+/* ========================================
+   PROYECTOS DEMO - Proyectos en Vivo
+   ======================================== */
+.proyectos-demo {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.demo-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
+.demo-preview {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.demo-nexus {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-nexus::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 3px solid rgba(168, 85, 247, 0.6);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.demo-nexus::after {
+    content: 'OS';
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(168, 85, 247, 0.8);
+}
+
+.demo-openbook {
+    background: linear-gradient(135deg, #1a0a0a 0%, #2d1515 50%, #0a0a0f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-openbook::before {
+    content: '📚';
+    font-size: 4rem;
+    opacity: 0.6;
+}
+
+.demo-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+.demo-card:hover .demo-overlay {
+    opacity: 1;
+}
+
+.demo-overlay i {
+    font-size: 2rem;
+}
+
+.demo-overlay span {
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.demo-info {
+    padding: 24px;
+}
+
+.demo-info h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.demo-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.demo-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.demo-tags span {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--primary-light);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .demo-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
